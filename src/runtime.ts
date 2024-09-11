@@ -5,6 +5,7 @@ import { ALLURE_RUNTIME_MESSAGE_CONTENT_TYPE } from "allure-js-commons/sdk/repor
 import { MessageTestRuntime } from "allure-js-commons/sdk/runtime";
 
 export class AllurePlaywrightTestRuntime extends MessageTestRuntime {
+  public expectedlyFailedTests: string[] = []
   constructor() {
     super();
   }

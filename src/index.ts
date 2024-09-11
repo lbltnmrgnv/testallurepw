@@ -496,6 +496,4 @@ export const allure = allurePlaywrightLegacyApi;
  */
 export { test, expect } from "@playwright/test";
 
-export const expectedlyFailedTests: string[] = [];
-
 export default AllureReporter;

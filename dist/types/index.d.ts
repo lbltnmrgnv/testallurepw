@@ -53,5 +53,4 @@ export declare const allure: import("./legacy.js").AllurePlaywrightLegacyApi;
  * @deprecated for removal, import functions directly from "@playwright/test".
  */
 export { test, expect } from "@playwright/test";
-export declare const expectedlyFailedTests: string[];
 export default AllureReporter;

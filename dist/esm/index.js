@@ -557,6 +557,5 @@ export var allure = allurePlaywrightLegacyApi;
  * @deprecated for removal, import functions directly from "@playwright/test".
  */
 export { test, expect } from "@playwright/test";
-export var expectedlyFailedTests = [];
 export default AllureReporter;
 //# sourceMappingURL=index.js.map

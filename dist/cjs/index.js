@@ -10,7 +10,6 @@ Object.defineProperty(exports, "expect", {
     return _test.expect;
   }
 });
-exports.expectedlyFailedTests = void 0;
 Object.defineProperty(exports, "test", {
   enumerable: true,
   get: function get() {
@@ -575,7 +574,5 @@ var allure = exports.allure = _legacy.allurePlaywrightLegacyApi;
 /**
  * @deprecated for removal, import functions directly from "@playwright/test".
  */
-
-var expectedlyFailedTests = exports.expectedlyFailedTests = [];
 var _default = exports["default"] = AllureReporter;
 //# sourceMappingURL=index.js.map
