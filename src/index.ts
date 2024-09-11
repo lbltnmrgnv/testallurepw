@@ -79,6 +79,7 @@ export class AllureReporter implements ReporterV2 {
   private allureRuntime: ReporterRuntime | undefined;
   private globalStartTime = new Date();
   private processedDiffs: string[] = [];
+  public expectedlyFailedTests: string[] = [];
   private readonly startedTestCasesTitlesCache: string[] = [];
   private readonly allureResultsUuids: Map<string, string> = new Map();
   private readonly attachmentSteps: Map<string, (string | undefined)[]> = new Map();

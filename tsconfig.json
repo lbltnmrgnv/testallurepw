@@ -5,6 +5,7 @@
   "compilerOptions": {
     "declaration": true,
     "emitDeclarationOnly": true,
+    "allowJs": true,
     "lib": ["dom", "esnext"],
     "types": [
       "node"
