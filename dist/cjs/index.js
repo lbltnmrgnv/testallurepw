@@ -10,6 +10,7 @@ Object.defineProperty(exports, "expect", {
     return _test.expect;
   }
 });
+exports.expectedlyFailedTests = void 0;
 Object.defineProperty(exports, "test", {
   enumerable: true,
   get: function get() {
@@ -59,7 +60,6 @@ var AllureReporter = exports.AllureReporter = /*#__PURE__*/function () {
     _defineProperty(this, "allureRuntime", void 0);
     _defineProperty(this, "globalStartTime", new Date());
     _defineProperty(this, "processedDiffs", []);
-    _defineProperty(this, "expectedlyFailedTests", []);
     _defineProperty(this, "startedTestCasesTitlesCache", []);
     _defineProperty(this, "allureResultsUuids", new Map());
     _defineProperty(this, "attachmentSteps", new Map());
@@ -575,5 +575,7 @@ var allure = exports.allure = _legacy.allurePlaywrightLegacyApi;
 /**
  * @deprecated for removal, import functions directly from "@playwright/test".
  */
+
+var expectedlyFailedTests = exports.expectedlyFailedTests = [];
 var _default = exports["default"] = AllureReporter;
 //# sourceMappingURL=index.js.map

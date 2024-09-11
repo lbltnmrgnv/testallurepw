@@ -40,7 +40,6 @@ export var AllureReporter = /*#__PURE__*/function () {
     _defineProperty(this, "allureRuntime", void 0);
     _defineProperty(this, "globalStartTime", new Date());
     _defineProperty(this, "processedDiffs", []);
-    _defineProperty(this, "expectedlyFailedTests", []);
     _defineProperty(this, "startedTestCasesTitlesCache", []);
     _defineProperty(this, "allureResultsUuids", new Map());
     _defineProperty(this, "attachmentSteps", new Map());
@@ -558,5 +557,6 @@ export var allure = allurePlaywrightLegacyApi;
  * @deprecated for removal, import functions directly from "@playwright/test".
  */
 export { test, expect } from "@playwright/test";
+export var expectedlyFailedTests = [];
 export default AllureReporter;
 //# sourceMappingURL=index.js.map
