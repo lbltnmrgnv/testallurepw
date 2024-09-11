@@ -32,6 +32,7 @@ export interface AllurePlaywrightLegacyApi {
     tag: (name: string) => Promise<void>;
     tags: (...tagsList: string[]) => Promise<void>;
     step: (name: string, body: () => Promise<void>) => Promise<void>;
+    expectedlyFailedTests: string[];
 }
 /**
  * @deprecated please use api exported by "allure-js-commons" instead.
