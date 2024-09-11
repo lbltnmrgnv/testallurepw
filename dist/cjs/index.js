@@ -59,6 +59,7 @@ var AllureReporter = exports.AllureReporter = /*#__PURE__*/function () {
     _defineProperty(this, "allureRuntime", void 0);
     _defineProperty(this, "globalStartTime", new Date());
     _defineProperty(this, "processedDiffs", []);
+    _defineProperty(this, "expectedlyFailedTests", []);
     _defineProperty(this, "startedTestCasesTitlesCache", []);
     _defineProperty(this, "allureResultsUuids", new Map());
     _defineProperty(this, "attachmentSteps", new Map());

@@ -25,6 +25,7 @@ export declare class AllureReporter implements ReporterV2 {
     private allureRuntime;
     private globalStartTime;
     private processedDiffs;
+    expectedlyFailedTests: string[];
     private readonly startedTestCasesTitlesCache;
     private readonly allureResultsUuids;
     private readonly attachmentSteps;
