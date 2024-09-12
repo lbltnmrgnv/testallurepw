@@ -35,6 +35,7 @@ export interface AllurePlaywrightLegacyApi {
   tag: (name: string) => Promise<void>;
   tags: (...tagsList: string[]) => Promise<void>;
   step: (name: string, body: () => Promise<void>) => Promise<void>;
+  addFailedTests: (tests: string[]) => Promise<void>;
   expectedlyFailedTests: string[];
 }
 
@@ -146,5 +147,7 @@ export const allurePlaywrightLegacyApi: AllurePlaywrightLegacyApi = {
    * @deprecated please use import { step } from "allure-js-commons" instead.
    */
   step: (name, body) => Promise.resolve(allure.step(name, body)),
-  expectedlyFailedTests: []
+
+  addFailedTests: (tests: string[]) => Promise.resolve(allure.addFailedTests(tests)),
+  expectedlyFailedTests: allure.expectedlyFailedTests,
 };
