@@ -11,6 +11,7 @@ export var statusToAllureStats = function statusToAllureStats(status, expectedSt
     return Status.PASSED;
   }
   console.log(testName);
+  console.log(getFailedTests());
   if (status === 'failed' && getFailedTests().includes(testName)) {
     return Status.EXPECTEDLY_FAILED;
   }

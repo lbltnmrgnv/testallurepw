@@ -17,6 +17,7 @@ var statusToAllureStats = exports.statusToAllureStats = function statusToAllureS
     return _allureJsCommons.Status.PASSED;
   }
   console.log(testName);
+  console.log((0, _failedTests.getFailedTests)());
   if (status === 'failed' && (0, _failedTests.getFailedTests)().includes(testName)) {
     return _allureJsCommons.Status.EXPECTEDLY_FAILED;
   }
