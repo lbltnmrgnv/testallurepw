@@ -280,7 +280,7 @@ export var AllureReporter = /*#__PURE__*/function () {
                     });
                   }
                 }
-                testResult.status = statusToAllureStats(result.status, test.expectedStatus);
+                testResult.status = statusToAllureStats(result.status, test.expectedStatus, test.title);
                 testResult.stage = Stage.FINISHED;
               });
               attachmentSteps = (_this$attachmentSteps2 = this.attachmentSteps.get(testUuid)) !== null && _this$attachmentSteps2 !== void 0 ? _this$attachmentSteps2 : [];

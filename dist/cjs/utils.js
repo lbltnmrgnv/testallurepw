@@ -5,7 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.statusToAllureStats = void 0;
 var _allureJsCommons = require("allure-js-commons");
-var statusToAllureStats = exports.statusToAllureStats = function statusToAllureStats(status, expectedStatus) {
+var _failedTests = require("./failedTests");
+var statusToAllureStats = exports.statusToAllureStats = function statusToAllureStats(status, expectedStatus, testName) {
   if (status === "skipped") {
     return _allureJsCommons.Status.SKIPPED;
   }
@@ -14,6 +15,10 @@ var statusToAllureStats = exports.statusToAllureStats = function statusToAllureS
   }
   if (status === expectedStatus) {
     return _allureJsCommons.Status.PASSED;
+  }
+  console.log(testName);
+  if (status === 'failed' && (0, _failedTests.getFailedTests)().includes(testName)) {
+    return _allureJsCommons.Status.EXPECTEDLY_FAILED;
   }
   return _allureJsCommons.Status.FAILED;
 };

@@ -292,7 +292,7 @@ export class AllureReporter implements ReporterV2 {
         }
       }
 
-      testResult.status = statusToAllureStats(result.status, test.expectedStatus);
+      testResult.status = statusToAllureStats(result.status, test.expectedStatus, test.title);
       testResult.stage = Stage.FINISHED;
     });
 

@@ -1,7 +1,8 @@
 import type { TestStatus } from "@playwright/test";
 import { Status } from "allure-js-commons";
+import {getFailedTests} from "./failedTests";
 
-export const statusToAllureStats = (status: TestStatus, expectedStatus: TestStatus): Status => {
+export const statusToAllureStats = (status: TestStatus, expectedStatus: TestStatus, testName: string): Status => {
   if (status === "skipped") {
     return Status.SKIPPED;
   }
@@ -12,6 +13,11 @@ export const statusToAllureStats = (status: TestStatus, expectedStatus: TestStat
 
   if (status === expectedStatus) {
     return Status.PASSED;
+  }
+  console.log(testName)
+
+  if (status === 'failed' && getFailedTests().includes(testName)) {
+    return Status.EXPECTEDLY_FAILED;
   }
 
   return Status.FAILED;
