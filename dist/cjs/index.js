@@ -3,14 +3,25 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = exports.allure = exports.addFailedTests = exports.AllureReporter = void 0;
+exports["default"] = exports.allure = exports.AllureReporter = void 0;
 Object.defineProperty(exports, "expect", {
   enumerable: true,
   get: function get() {
     return _test.expect;
   }
 });
-exports.expectedlyFailedTests = void 0;
+Object.defineProperty(exports, "getFailedTests", {
+  enumerable: true,
+  get: function get() {
+    return _failedTests.getFailedTests;
+  }
+});
+Object.defineProperty(exports, "saveFailedTests", {
+  enumerable: true,
+  get: function get() {
+    return _failedTests.saveFailedTests;
+  }
+});
 Object.defineProperty(exports, "test", {
   enumerable: true,
   get: function get() {
@@ -26,6 +37,7 @@ var _reporter = require("allure-js-commons/sdk/reporter");
 var _legacy = require("./legacy.js");
 var _utils = require("./utils.js");
 var _test = require("@playwright/test");
+var _failedTests = require("./failedTests");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
@@ -576,9 +588,4 @@ var allure = exports.allure = _legacy.allurePlaywrightLegacyApi;
  * @deprecated for removal, import functions directly from "@playwright/test".
  */
 var _default = exports["default"] = AllureReporter;
-var expectedlyFailedTests = exports.expectedlyFailedTests = [];
-var addFailedTests = exports.addFailedTests = function addFailedTests(tests) {
-  expectedlyFailedTests.push(tests);
-  return expectedlyFailedTests;
-};
 //# sourceMappingURL=index.js.map

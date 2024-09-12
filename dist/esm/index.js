@@ -558,9 +558,5 @@ export var allure = allurePlaywrightLegacyApi;
  */
 export { test, expect } from "@playwright/test";
 export default AllureReporter;
-export var expectedlyFailedTests = [];
-export var addFailedTests = function addFailedTests(tests) {
-  expectedlyFailedTests.push(tests);
-  return expectedlyFailedTests;
-};
+export { saveFailedTests, getFailedTests } from "./failedTests";
 //# sourceMappingURL=index.js.map
