@@ -54,3 +54,5 @@ export declare const allure: import("./legacy.js").AllurePlaywrightLegacyApi;
  */
 export { test, expect } from "@playwright/test";
 export default AllureReporter;
+export declare let expectedlyFailedTests: any[];
+export declare const addFailedTests: (tests: string[]) => any[];

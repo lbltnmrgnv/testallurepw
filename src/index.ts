@@ -497,3 +497,10 @@ export const allure = allurePlaywrightLegacyApi;
 export { test, expect } from "@playwright/test";
 
 export default AllureReporter;
+
+export let expectedlyFailedTests = []
+
+export const addFailedTests = (tests: string[]) => {
+  expectedlyFailedTests.push(tests);
+  return expectedlyFailedTests;
+}

@@ -173,10 +173,6 @@ var allurePlaywrightLegacyApi = exports.allurePlaywrightLegacyApi = {
    */
   step: function step(name, body) {
     return Promise.resolve(allure.step(name, body));
-  },
-  addFailedTests: function addFailedTests(tests) {
-    return Promise.resolve(allure.addFailedTests(tests));
-  },
-  expectedlyFailedTests: allure.expectedlyFailedTests
+  }
 };
 //# sourceMappingURL=legacy.js.map

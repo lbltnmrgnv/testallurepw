@@ -3,13 +3,14 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = exports.allure = exports.AllureReporter = void 0;
+exports["default"] = exports.allure = exports.addFailedTests = exports.AllureReporter = void 0;
 Object.defineProperty(exports, "expect", {
   enumerable: true,
   get: function get() {
     return _test.expect;
   }
 });
+exports.expectedlyFailedTests = void 0;
 Object.defineProperty(exports, "test", {
   enumerable: true,
   get: function get() {
@@ -575,4 +576,9 @@ var allure = exports.allure = _legacy.allurePlaywrightLegacyApi;
  * @deprecated for removal, import functions directly from "@playwright/test".
  */
 var _default = exports["default"] = AllureReporter;
+var expectedlyFailedTests = exports.expectedlyFailedTests = [];
+var addFailedTests = exports.addFailedTests = function addFailedTests(tests) {
+  expectedlyFailedTests.push(tests);
+  return expectedlyFailedTests;
+};
 //# sourceMappingURL=index.js.map
