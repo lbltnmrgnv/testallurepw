@@ -18,8 +18,6 @@ export function saveFailedTests(tests) {
   fs.writeFileSync(filePath, JSON.stringify(state));
 }
 var failedTests = loadState();
-
-// Функция для получения текущего значения переменной
 export function getFailedTests() {
   return failedTests;
 }

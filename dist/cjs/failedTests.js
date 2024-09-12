@@ -29,8 +29,6 @@ function saveFailedTests(tests) {
   fs.writeFileSync(filePath, JSON.stringify(state));
 }
 var failedTests = loadState();
-
-// Функция для получения текущего значения переменной
 function getFailedTests() {
   return failedTests;
 }

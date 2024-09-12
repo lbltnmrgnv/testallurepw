@@ -13,6 +13,7 @@ export var statusToAllureStats = function statusToAllureStats(status, expectedSt
   console.log(testName);
   console.log(getFailedTests());
   if (status === 'failed' && getFailedTests().includes(testName)) {
+    console.log('vse taki verno');
     return Status.EXPECTEDLY_FAILED;
   }
   return Status.FAILED;

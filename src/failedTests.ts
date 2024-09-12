@@ -25,7 +25,6 @@ export function saveFailedTests(tests: string[]): void {
 
 let failedTests: string[] = loadState();
 
-// Функция для получения текущего значения переменной
 export function getFailedTests(): string[] {
     return failedTests;
 }
