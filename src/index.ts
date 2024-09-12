@@ -293,8 +293,8 @@ export class AllureReporter implements ReporterV2 {
       }
 
       testResult.status = statusToAllureStats(result.status, test.expectedStatus, test.title);
-      testResult.stage = Stage.FINISHED;
       console.log(testResult.status)
+      testResult.stage = Stage.FINISHED;
     });
 
     const attachmentSteps = this.attachmentSteps.get(testUuid) ?? [];

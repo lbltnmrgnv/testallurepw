@@ -1,3 +1,5 @@
 {
-  "failedTests": []
+  "failedTests": [
+    "Отправка GET запроса на роут /payments?filter c валидным значением query параметра filter[merchant_amount_min]  = 2000"
+  ]
 }
