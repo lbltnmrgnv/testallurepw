@@ -7,6 +7,7 @@ exports.statusToAllureStats = void 0;
 var _allureJsCommons = require("allure-js-commons");
 var _failedTests = require("./failedTests");
 var statusToAllureStats = exports.statusToAllureStats = function statusToAllureStats(status, expectedStatus, testName) {
+  console.log(_allureJsCommons.Status);
   if (status === "skipped") {
     return _allureJsCommons.Status.SKIPPED;
   }
