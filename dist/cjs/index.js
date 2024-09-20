@@ -313,7 +313,6 @@ var AllureReporter = exports.AllureReporter = /*#__PURE__*/function () {
                   }
                 }
                 testResult.status = (0, _utils.statusToAllureStats)(result.status, test.expectedStatus, test.title);
-                console.log(testResult.status);
                 testResult.stage = _allureJsCommons.Stage.FINISHED;
               });
               attachmentSteps = (_this$attachmentSteps2 = this.attachmentSteps.get(testUuid)) !== null && _this$attachmentSteps2 !== void 0 ? _this$attachmentSteps2 : [];

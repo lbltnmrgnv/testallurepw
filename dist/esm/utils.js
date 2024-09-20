@@ -1,7 +1,6 @@
 import { Status } from "allure-js-commons";
 import { getFailedTests } from "./failedTests";
 export var statusToAllureStats = function statusToAllureStats(status, expectedStatus, testName) {
-  console.log(Status);
   if (status === "skipped") {
     return Status.SKIPPED;
   }
