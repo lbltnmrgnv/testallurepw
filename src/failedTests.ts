@@ -12,9 +12,9 @@ function loadState(): string[] {
     try {
         const data = fs.readFileSync(filePath, 'utf8');
         const state: State = JSON.parse(data);
-        return state.failedTests;
+        return state.failedTests || []; // Возвращаем пустой массив, если что-то пошло не так
     } catch (error) {
-        return
+        return []; // Возвращаем пустой массив в случае ошибки
     }
 }
 
@@ -23,7 +23,7 @@ export function saveFailedTests(tests: string[]): void {
     fs.writeFileSync(filePath, JSON.stringify(state));
 }
 
-let failedTests: string[] = loadState();
+let failedTests: string[] = loadState(); // В результате у вас всегда будет массив, даже если пустой
 
 export function getFailedTests(): string[] {
     return failedTests;
